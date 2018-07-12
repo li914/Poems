@@ -1,0 +1,134 @@
+/* pages/poems/poems.wxss */
+
+.all {
+  /* background-color: #f0efe2; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* height: 180vh; */
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 5px;
+}
+
+.time {
+  float: right;
+  font-size: 14px;
+  margin-right: 7px;
+}
+
+.test {
+  clear: both;
+}
+
+.top_header {
+  background-color: rgba(165, 165, 165, 0.35);
+  width: 100vw;
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.top_header .header {
+  width: 60%;
+  margin: 0% 11%;
+  color: #fff;
+}
+
+.top_header .header text {
+  margin-right: 5%;
+}
+
+.text_current {
+  color: red;
+}
+
+.content {
+  width: 1800px;
+    height: 110vh;  
+   /* height: 110vmax;  */
+}
+
+.content_list {
+  float: left;
+  width: 100vw;
+  /* border: 2px solid red; */
+}
+
+.content_list .author_instro {
+  text-indent: 2em;
+  clear: both;
+  font-size: 12px;
+  border-top: 1px solid rgba(144, 144, 144, 0.4);
+  border-bottom: 1px solid rgba(144, 144, 144, 0.4);
+  line-height: 26px;
+  padding-top: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 20vh;
+}
+
+.letter {
+  width: 100vw;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.letter .letter_title {
+  width: 100vw;
+  /* background-color: #f0efe2; */
+  background-color: rgba(144, 144, 144, 0.2);
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid rgba(144, 144, 144, 0.4);
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.letter .letter_title label {
+  font-size: 12px;
+}
+
+.letter .letter_content {
+  font-size: 14px;
+  line-height: 24px;
+    height: 90vh;  
+  /* height: 90vmax; */
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: rgba(144, 144, 144, 0.1);
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.letter .letter_content text {
+  display: block;
+  margin: 7px 5%;
+  width: 90%;
+  line-height: 24px;
+  text-align: center;
+}
+
+.letter_bottom{
+  display: flex;
+  /* background-color: red; */
+  justify-content: center;
+  align-content: center;
+   width: 100vw; 
+}
+
+.letter_bottom view {
+  width: 12px;
+   height: 12px; 
+  border-radius: 6px;
+  margin: 5px 7px;
+  background-color: rgba(144, 144, 144, 0.6);
+}
+
+.letter_bottom .current{
+  background-color: red;
+}

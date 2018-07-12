@@ -1,0 +1,44 @@
+<!--pages/poems/poems.wxml-->
+<!-- <text>pages/poems/poems.wxml</text>  -->
+<view class='all' style="background-image:url({{bgPicUrl}})">
+  <view class='title'>T每日一诗词经</view>
+  <view style='font-size: 10px;float: left;'>第{{id}}首诗经，唐诗，宋诗，宋词</view>
+  <view class='time'>{{h}}:{{m}}:{{s}}</view>
+  <view class='test'>
+    <view class='top_header'>
+      <view class='header'>
+        <text class="{{current==0?text_current:''}}">诗经</text>
+        <text class="{{current==1?text_current:''}}">唐诗</text>
+        <text class="{{current==2?text_current:''}}">宋诗</text>
+        <text class="{{current==3?text_current:''}}">宋词</text>
+      </view>
+    </view>
+    <view class='content' bind:touchstart="startM" bind:touchend="endM" bind:touchmove="moveM" style='{{left}}'>
+      <view wx:for="{{result.data}}" wx:for-item="item" wx:for-index="index" class='content_list'>
+        <view class='letter'>
+          <view class="letter_title">
+            {{item.poems.chapter?item.poems.chapter+'·':''}}{{item.poems.title}}
+            <label>{{item.poems.author}}</label>
+          </view>
+          <view class='letter_content'>
+            <text wx:for="{{item.poems.content}}" wx:for-item="value">{{value}}</text>
+          </view>
+          <view class='author_instro'>{{item.poems_author.intro?item.poems_author.intro:''}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='letter_bottom'>
+      <view class="{{current==0?radiusView:''}}"></view>
+      <view class="{{current==1?radiusView:''}}"></view>
+      <view class="{{current==2?radiusView:''}}"></view>
+      <view class="{{current==3?radiusView:''}}"></view>
+    </view>
+    <view>
+      <view>介绍一点：</view>
+      <view style='text-indent: 2em;font-size: 13px;'>1.此小程序数据来源，均来自大佬们爬取的数据（上github.com可搜索）</view>
+      <view style='text-indent: 2em;font-size: 13px;'>2.此小程序每天只提供一首诗经，唐诗，宋诗，宋词，次日零时上小程序会自动更新数据</view>
+      <view style='text-indent: 2em;font-size: 13px;'>3.由于是爬虫爬取的数据，难免会有错误，若发现有错误，可发邮件联系：1837725661@qq.com</view>
+      <!-- <view style='text-indent: 2em;font-size: 13px;'>3.此小程序是个人</view> -->
+    </view>
+  </view>
+</view>
