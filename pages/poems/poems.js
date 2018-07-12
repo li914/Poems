@@ -101,7 +101,7 @@ Page({
     var _this = this;
     http.get({
       // url: "http://www.test.tp5.com/letter/" + time.timestamp(),
-      // url: "http://www.test.tp5.com/letter/" + time,
+      url: "http://www.test.tp5.com/letter/" + time,
       success: function(res) {
         console.log(res);
         storage.set('poems', res);
